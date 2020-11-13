@@ -49,7 +49,6 @@ const loadRepositories = async () => {
         })
         const data = await response.json();
         updatePageData(data);
-        console.log(data)
         data.data.user.repositories.edges.map(repo => {
             document.querySelector(".gh-main__repos__list").innerHTML += displayLatestRepos(repo);
             feather.replace();
